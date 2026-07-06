@@ -20,4 +20,10 @@ class Profile:
         self.accidents = accidents
         self.monthly_rate = 0.0
 
-        
+    def to_dict(self):
+        """This stores the object data into a dictionary for JSON"""
+        return {
+            "Customer Name": self.name,
+            "Age": self.age,
+            "Monthly Rate": round(self.monthly_rate, 2)
+        }    
