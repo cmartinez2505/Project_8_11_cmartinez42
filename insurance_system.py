@@ -27,3 +27,7 @@ class Profile:
             "Age": self.age,
             "Monthly Rate": round(self.monthly_rate, 2)
         }    
+
+Class QuoteCalculator:
+
+"""Checks parameters to make the monthly quote"""
