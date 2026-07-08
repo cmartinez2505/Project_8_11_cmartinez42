@@ -61,9 +61,11 @@ while running == True:
     accidents = int(input("Please enter the total number of car accidents you had: ")) 
 
 
-    #Here the function is called to find the final insurance price for the customer
+    #Updated by building the object and calculate rates using the classes imported
 
-    monthly_payment = calculate_quote(age, car_year, salary, driving_years, accidents)
+    new_user = Profile(customer_name, age, car_year, salary, driving_years, accidents)
+    monthly_payment = calculator.calculate_quote(age, car_year, salary, driving_years, accidents)
+    new_user.monthly_rate = monthly_payment
 
     #Below is a dictionary collection to create a customer profile
 
