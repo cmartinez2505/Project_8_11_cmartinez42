@@ -26,10 +26,9 @@ def show_profiles(all_customers):
       print("-------------------------------------------------")
 
 
-
-#Here is my list for all my customers dictionaries stores
-
-all_customers = []
+#This replaces my old dictionary list
+calculator = QuoteCalculator()
+handler = Data()
 
 
 #Below is my main program loop
