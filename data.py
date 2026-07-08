@@ -6,3 +6,11 @@ Resources used: Python Crash Course (Chapters 8-11)
 Date: July 7, 2026
 """
 
+import json
+
+FILENAME = "profiles.json"
+
+class Data:
+    """This class is used to read and write customer data files"""
+
+    
