@@ -19,4 +19,13 @@ class Data:
             with open(FILENAME, 'r') as f:
                 return json.load(f)
         except FileNotFoundError:
-            return []    
+            return []
+
+    def save_profiles(self, new_profile):
+        """This fuction will load already made profiles, append the new profile, then save it all""" 
+
+        profiles = self.load_profiles()
+        profiles.append(new_profile)
+
+        with open(FILENAME, 'w') as f:
+            json.dump(profiles, f)
