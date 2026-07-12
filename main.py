@@ -67,17 +67,12 @@ while running == True:
     monthly_payment = calculator.calculate_quote(age, car_year, salary, driving_years, accidents)
     new_user.monthly_rate = monthly_payment
 
-    #Below is a dictionary collection to create a customer profile
+    #Transfer the profile objcet data to a dictionary
+    customer_profile = new_user.to_dict()
 
-    customer_profile = {
-       "Customer Name": customer_name,
-       "Age": age,
-       "Monthly Rate": monthly_payment
-    }
+    #Saves customers profile to JSON file
+    handler.save_profiles(customer_profile)
 
-    #Here the profile has been appended to the all_customers list
-
-    all_customers.append(customer_profile)
 
     #Printed out the customers quote result
 
