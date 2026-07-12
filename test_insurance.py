@@ -11,3 +11,11 @@ from insurance_system import QuoteCalculator
 
 class TestInsuranceCalculator(unittest.TestCase):
     "Tests our calculations to see if they calculate correctly"
+
+    def test_basic_quote(self):
+        """Test a basic normal driver with no accidents to make sure the math works"""
+        calculator = QuoteCalculator()
+
+        rate = calculator.calculate_quote(30, 2022, 65000, 10, 0)
+        self.assertTrue(rate > 0)
+    
