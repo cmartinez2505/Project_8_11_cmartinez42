@@ -19,6 +19,8 @@ class TestInsuranceCalculator(unittest.TestCase):
         rate = calculator.calculate_quote(30, 2022, 65000, 10, 0)
         self.assertTrue(rate > 0)
 
+        self.assertEqual(rate, 90.00)
+
     def test_high_accident_risk(self):
         "Test to make sure a driver with multiple accidents gets charged a higher price"
 
@@ -28,4 +30,7 @@ class TestInsuranceCalculator(unittest.TestCase):
         high_risk_rate = calculator.calculate_quote(30, 2022, 65000, 10, 3)
 
         self.assertTrue(high_risk_rate > low_risk_rate)
-    
+
+
+if __name__ == '__main__':
+    unittest.main()

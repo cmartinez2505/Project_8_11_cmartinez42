@@ -11,7 +11,7 @@ import json
 FILENAME = "profiles.json"
 
 class Data:
-    """This class is used to read and write customer data files"""
+    """This class is used to read, write, and save customer data files"""
 
     def load_profiles(self):
         """This function will try to open the JSON file and return the lists"""
